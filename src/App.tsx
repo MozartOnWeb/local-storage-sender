@@ -9,14 +9,6 @@ function App() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    localStorage.setItem("phone", phone);
-    localStorage.setItem("email", email);
-
-    setTimeout(() => {
-      setPhone("");
-      setEmail("");
-    }, 500);
-
     const iframe = document.querySelector("iframe");
     const wind = iframe?.contentWindow;
 
@@ -26,6 +18,11 @@ function App() {
     };
 
     wind?.postMessage(JSON.stringify(data), "*");
+
+    setTimeout(() => {
+      setPhone("");
+      setEmail("");
+    }, 1000);
   };
 
   return (
