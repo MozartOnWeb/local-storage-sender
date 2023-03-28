@@ -49,7 +49,7 @@ function App() {
         <button type="submit">submit</button>
       </form>
 
-      <iframe src="https://kabakoo-portfolio"></iframe>
+      <iframe src="https://local-storage-receiver.vercel.app"></iframe>
     </div>
   );
 }
